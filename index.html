@@ -14,14 +14,18 @@
   <section class="subscription">
 <h2 class="visually-hidden">Subscription page Base Apparel</h2>
 <div class="subscription__logo">
-<a class="subscription__logo-link" href="#"><img class="logo" src="./images/logo.svg" width="100" height="21" alt="Base Apparel logo"></a>
+<img class="logo" src="./images/logo.svg" width="100" height="21" alt="Base Apparel logo">
 </div>
-<img class="subscription_photo" src="./images/hero-mobile.jpg" width="376" height="250" alt="model Base Apparel">
+<picture class="subsription__picture-wrapper">
+<source media="(min-width: 776px)" srcset="./images/hero-desktop.jpg" />
+<img class="subscription__photo" src="./images/hero-mobile.jpg" width="376" height="250" alt="model Base Apparel">
+</picture>
 <form class="form" method="POST" action="#">
-  <p class="form__title"><span class="form__title-accent">We're</span> coming soon</p>
-<p class="form__subscription">Hello fellow shoppers! We're currently building our new fashion store. 
+<p class="form__title"><span class="form__title-accent">We're</span> coming soon</p>
+<p class="form__text">Hello fellow shoppers! We're currently building our new fashion store. 
   Add your email below to stay up-to-date with announcements and our launch deals.</p>
-  <input class="form__email-input" type="text">
+  <input class="form__email-input" type="text" placeholder="Email Address" required>
+  <button class="form__submit"><span class="visually-hidden">Send</span></button>
   <p class="visually-hidden">Email Address</p>
 </form>
 </section>
