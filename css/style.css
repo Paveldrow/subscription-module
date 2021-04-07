@@ -102,7 +102,7 @@ a {
 .form {
   position: relative;
   max-width: 600px;
-margin: 0 auto; 
+  margin: 0 auto;
   padding-top: 64px;
   padding-right: 32px;
   padding-left: 32px;
@@ -185,12 +185,9 @@ margin: 0 auto;
   }
 }
 
-
 .form__email-input::placeholder {
   color: #ce9898;
 }
-
-
 
 .form__email-input--invalid {
   border: 2px solid #f96464;
@@ -199,10 +196,34 @@ margin: 0 auto;
   background-position: right 72px center;
 }
 
+@media (min-width: 1150px) {
+  .form__email-input--invalid {
+    background-position: right 104px center;
+  }
+}
+
+.form--invalid::after {
+  position: absolute;
+  left: 57px;
+  bottom: 70px;
+  content: 'Please provide a valid email';
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13px;
+  color: #f96464;
+}
+
+@media (min-width: 1150px) {
+  .form.form--invalid::after {
+    left: 32px;
+    bottom: -28px;
+    line-height: 28px;
+  }
+}
 .form__submit {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 32px;
+  bottom: 92px;
   width: 64px;
   height: 48px;
   border: none;
@@ -216,8 +237,10 @@ margin: 0 auto;
 
 @media (min-width: 1150px) {
   .form__submit {
-width: 100px;
-height: 56px;
+    width: 100px;
+    height: 56px;
+    right: 0;
+    bottom: 0;
   }
 }
 
